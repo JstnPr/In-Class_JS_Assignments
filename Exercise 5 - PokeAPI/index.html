@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Pokedex Field Terminal</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jstnpr/jstn-css-reset@main/reset.min.css">
+      <link rel="stylesheet" href="styles.css">
+      <script src="main.js" defer></script>
+   </head>
+   <body>
+      <main class="pokedex-shell">
+         <header class="device-header">
+            <div class="brand-lockup">
+               <span class="brand-lights" aria-hidden="true"><i></i><i></i><i></i></span>
+               <div>
+                  <p class="eyebrow">FIELD RESEARCH EQUIPMENT</p>
+                  <h1>POKEDEX</h1>
+               </div>
+            </div>
+            <div class="power-indicator"><span aria-hidden="true"></span><p>POWER</p></div>
+         </header>
+
+         <section class="screen-bezel" aria-label="Pokedex display">
+            <div class="screen-meta">
+               <span>POKEMON DATABASE</span>
+               <span id="connection-status" class="connection-status" aria-live="polite">INITIALIZING</span>
+            </div>
+            <div class="screen-panel">
+               <div class="poke-nav-container">
+                  <button id="previous-pokemon" class="nav-control" type="button" aria-label="Previous Pokemon" disabled>
+                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M14.5 5l-7 7 7 7"/>
+                     </svg>
+                     <span>PREV</span>
+                  </button>
+
+                  <article class="pokemon-container" aria-live="polite">
+                     <div class="img-cont">
+                        <span class="image-label">SPECIMEN / FRONT</span>
+                        <img id="poke-img" alt="Pokemon illustration">
+                        <span class="image-index">VISUAL RECORD 01</span>
+                     </div>
+                     <div class="stats-wrapper">
+                        <div class="stats-heading">
+                           <div>
+                              <p class="field-label">SPECIES IDENTIFIED</p>
+                              <h2 id="poke-name"></h2>
+                           </div>
+                           <span class="record-mark" aria-hidden="true">NO.</span>
+                        </div>
+                        <div id="type-wrapper" class="data-group">
+                           <h3>TYPE PROFILE</h3>
+                           <div id="poke-types" class="pill-list"></div>
+                        </div>
+                        <div id="weak-wrapper" class="data-group">
+                           <h3>WEAKNESSES</h3>
+                           <div id="poke-weaknesses" class="pill-list"></div>
+                        </div>
+                     </div>
+                  </article>
+
+                  <button id="next-pokemon" class="nav-control" type="button" aria-label="Next Pokemon" disabled>
+                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M9.5 5l7 7-7 7"/>
+                     </svg>
+                     <span>NEXT</span>
+                  </button>
+               </div>
+            </div>
+         </section>
+
+         <footer class="hardware-footer">
+            <div class="speaker-grille" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+            <p class="footer-stamp">FIELD INDEX <span id="field-index">----</span></p>
+            <span class="case-marker" aria-hidden="true"></span>
+         </footer>
+      </main>
+   </body>
+</html>
