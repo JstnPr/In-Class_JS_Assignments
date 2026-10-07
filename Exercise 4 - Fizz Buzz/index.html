@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>JstnPr / FizzBuzz</title>
+      <!-- Links and Scripts -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jstnpr/jstn-css-reset@main/reset.min.css">
+      <link rel="stylesheet" href="styles.css">
+      <script src="script.js" defer></script>
+   </head>
+   <body>
+      <main>
+         <!-- Script Buttons -->
+         <div class="card-cont">
+            <div class="qty-cont">
+               <h2>Run Limit</h2>
+               <input type="number" id="run-limit" min="1" step="1" value="1">
+            </div>
+            <article class="card">
+               <h3>FizzBuzz</h3>
+               <p>Standard Fizz-Buzz snippet, using if/else statements</p>
+               <button class="button" onclick="fizzBuzz()">Run Snippet</button>
+            </article>
+            <article class="card">
+               <h3>Ternary FizzBuzz</h3>
+               <p>Succinct Fizz-Buzz snippet, using Ternary Operations</p>
+               <button class="button" onclick="ternFizzBuzz()">Run Snippet</button>
+            </article>
+            <article class="card">
+               <h3>FizzBuzzJazzBazz</h3>
+               <p>Ternary FizzBuzz, expanded to use 7, 11 & concatenation</p>
+               <button class="button" onclick="fizzBuzzJazzBazz()">Run Snippet</button>
+            </article>
+            <article class="card">
+               <h3>No Modulo FizzBuzz</h3>
+               <p>Ternary FizzBuzz, without the Modulo Operator (%)</p>
+               <button class="button" onclick="noModuloFizzBuzz()">Run Snippet</button>
+            </article>
+         </div>
+         <!-- Output Console -->
+         <div class="console-cont">
+            <div id="console"></div>
+            <button class="button" id="clear-button">Clear</button>
+         </div>
+      </main>
+   </body>
+</html>

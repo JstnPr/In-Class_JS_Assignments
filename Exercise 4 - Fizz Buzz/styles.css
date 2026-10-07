@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --container-height: 500px;
+}
+
+body {
+    /* Display */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Typography */
+    font-family: Inter;
+}
+
+main {
+    /* Display */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Position */
+    position: absolute;
+    /* Styling */
+    border: 1px solid rgba(128, 128, 128, 0.35);
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    /* Behavior */
+    overflow: hidden;
+    user-select: none;
+
+    .button {
+        /* Box Model */
+        padding: 5px 9px;
+        /* Typography */
+        color: white;
+        font-size: 14px;
+        /* Styling */
+        border: 0;
+        border-radius: 10px;
+        background-color: #ff4150;
+        /* Behavior */
+        cursor: pointer;
+
+        &:hover { background-color: #e73948; }
+        &:active { background-color: #d82b3a; }
+    }
+
+    .card-cont {
+        /* Box Model */
+        width: 500px;
+        height: var(--container-height);
+        padding: 15px;
+        /* Display */
+        display: flex;
+        align-items: center;
+        flex-wrap:wrap;
+
+        .qty-cont {
+            flex: 0 0 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            input {
+                /* Box Model */
+                width: 140px;
+                padding: 8px 10px;
+                /* Typography */
+                color: #1A202D;
+                font: inherit;
+                text-align: center;
+                /* Styling */
+                border: 2px solid #ff4150;
+                border-radius: 10px;
+                outline: none;
+
+                &:focus { box-shadow: 0 0 0 3px rgba(255, 65, 80, 0.2); }
+            }
+        }
+
+        .card {
+            /* Box Model */
+            padding: 15px;
+            /* Display */
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 50%;
+
+            p {
+                /* Box Model */
+                margin: 15px 0;
+                /* Typography */
+                font-size: 15px;
+            }
+        }
+    }
+    .console-cont {
+        /* Box Model */
+        height: var(--container-height);
+        /* Display */
+        display: flex;
+        flex-direction: column;
+
+        #console {
+            /* Box Model */
+            height: auto;
+            width: 300px;
+            padding: 20px;
+            /* Display */
+            flex: 1;
+            /* Typography */
+            color: white;
+            font-size: 15px;
+            /* Styling */
+            background-color: #1A202D;
+            /* Behavior */
+            overflow-y: scroll;
+        }
+        .button {
+            /* Box Model */
+            margin: 16px;
+            /* Position */
+            position: absolute;
+            right: 0;
+        }
+    }
+}
